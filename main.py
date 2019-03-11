@@ -26,22 +26,16 @@ def recommend_movies(title):
     movie_indices=[i[0] for i in sim_score]
     return rec_movies.iloc[movie_indices]
 
-#def filwrite():
+
 
 enter_movie=input("Enter a movie: ")
 close_match=get_close_matches(enter_movie,rec_movies,1,0.4)
-'''r=re.compile(rec_movies)
-newmovies=list(filter(r.match,rec_movies))
-print(".*%s",enter_movie)'''
+
 enter_movie=''.join(close_match)
 print(enter_movie)
 x=recommend_movies(enter_movie)
 print(x)
-print(x.length())
-'''file = open("D://testPanda2//venv//temp.txt", "w+")
-file.write(x)
-# print(file.read())
-file.close()'''
-#filwrite()
+
+
 
 
